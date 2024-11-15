@@ -4,7 +4,8 @@ import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [searchEvent, setSearchEvent] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+
   const handleInputChange = (e) => {
     const searchTerm = e.target.value;
     setSearchEvent(searchTerm);
@@ -22,14 +23,19 @@ const Header = () => {
                 className=" mix-blend-multiply h-20 w-40 pb-2"
               />
             </Link>
-            <input
-              type="text"
-              name=""
-              value={searchEvent}
-              onChange={handleInputChange}
-              placeholder={`Search by title and tags`}
-              className="p-2 rounded-md"
-            />
+            {/* <div className="relative ">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <CiSearch className="text-slate-500 font-semibold" size={20} />
+              </div>
+              <input
+                type="text"
+                name=""
+                value={searchTerm}
+                onChange={handleInputChange}
+                placeholder={`Search by title and tags`}
+                className="py-2 px-10  rounded-md"
+              />
+            </div> */}
           </div>
         </div>
       </div>
